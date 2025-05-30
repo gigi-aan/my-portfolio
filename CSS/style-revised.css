@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+:root{
+    --pink: #E6C1C0;
+    --dark: #292929;
+    --dark-gray: #767373;
+    --light: #D9D9D9;
+    --poppins: 'Poppins', sans-serif;
+    --logo-font: 'Macondo', cursive;
+    --quicksand: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0; 
+    font-family: var(--quicksand);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 50px;
+}
+
+.texture-bg {
+    background-size: cover;
+    background-color: var(--dark);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    object-position: center center; 
+    z-index: 9999999;
+    mix-blend-mode: overlay;
+    opacity: 0.7; 
+    pointer-events: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    height: 60px;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.header-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--dark-gray);
+    border-radius: 50px;
+    padding: 10px 20px;
+    filter: drop-shadow(0 4px 6px rgba(249, 248, 248, 0.17));
+}
+
+.header-items li{
+    color: var(--light);
+    font-size: 14px;
+    cursor: pointer;
+    list-style: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.header-items li:hover {
+    background-color: var(--light);
+    color: var(--dark-gray);
+    transition: all 0.3s ease;  
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    background-color: var(--dark-gray);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.first-letter,
+.last-letter {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: var(--logo-font);
+    color: var(--pink);
+    font-size: 28px;
+}
+
+.first-expand,
+.last-expand {
+    display: inline-block;
+    align-items: baseline;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 0.8s ease-in-out;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: var(--pink);
+}
+
+.logo:hover .first-expand,
+.logo:hover .last-expand {
+    max-width: 100px;
+}
+
+.nav-container {
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 20px !important;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    background-color: var(--dark-gray);
+    border-radius: 50px;
+    padding: 10px 15px;
+    filter: drop-shadow(0 4px 6px rgba(249, 248, 248, 0.17));
+}
+
+.navbar .link{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transform-origin: center left;
+    transition: width 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--light);
+    width: 60px;
+    height: 40px;
+}
+
+.navbar .link::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center right; 
+    background-color: var(--light);
+    z-index: -1; 
+}
+
+.navbar .link:hover,
+.navbar .link:focus {
+    outline: 0;
+    width: 200px;
+    color: var(--dark);
+}
+
+.navbar .link:hover::before,
+.navbar .link:focus::before {
+    transform: translateX(0);
+}
+
+.link:hover .link-title, 
+.link:focus .link-title {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.link-title {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: center left;
+    display: block;
+    text-align: center;
+}
+
+.navbar .link .link-icon {
+    position: absolute;
+    left: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px; 
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+}
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    background-color: var(--light);
+    border-radius: 20px;
+    height: calc(100vh - 200px);
+    padding: 0px 20px;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: var(--dark);
+    font-weight: bold;
+    margin: 10px;
+}
+
+.hero h2{
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 0px 90px;
+    text-align: center;
+}
+
+.hero .current{
+    text-align: left;
+    padding: 0px 40px;
+    margin-top: 20px;
+}
+
+.explore-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.explore-btn {
+  display: flex;
+  gap: 10px;
+  background-color: var(--dark-gray);
+  border-radius: 30px;
+  color: var(--light);
+  cursor: pointer;
+  transition-duration: .3s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding: 8px 25px;
+}
+
+.explore-btn a{
+    width: 100%;
+}
+
+.svgIcon {
+  height: 25px;
+  transition-duration: 1s;
+  fill: var(--light);
+}
+
+
+.explore-btn:hover {
+  background-color: var(--pink);
+  color: var(--dark);
+}
+
+.explore-btn:hover .svgIcon{
+    fill: var(--dark);
+}
+
+.explore-btn:hover a{
+  color: var(--dark);
+}
+
+.explore-btn:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1s;
+  color: var(--light);
+}
+
+
