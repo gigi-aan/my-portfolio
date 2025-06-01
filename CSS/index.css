@@ -270,6 +270,20 @@ a {
     z-index: 1; 
 }
 
+.navbar .link.active {
+    width: 200px;
+    color: var(--dark);
+}
+
+.navbar .link.active::before {
+    transform: translateX(0);
+}
+
+.link.active .link-title {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .hero{
     display: flex;
     flex-direction: column;

@@ -16,4 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
     current = (current + 1) % total;
     showItem(current);
   }, intervalTime);
+
+  const currentPage = location.pathname.split("/").pop();
+  document.querySelectorAll(".navbar .link").forEach(link => {
+      if (link.getAttribute("href").split("/").pop() === currentPage) {
+          link.classList.add("active");
+      }
+  });
 });
