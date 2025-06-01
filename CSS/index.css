@@ -34,8 +34,7 @@ html, body {
     justify-content: center;
 }
 
-.texture-bg,
-.finisher-header {
+.texture-bg{
     background-size: cover;
     background-color: var(--dark);
     position: fixed;
@@ -47,6 +46,14 @@ html, body {
     mix-blend-mode: overlay;
     opacity: 0.7; 
     pointer-events: none;
+}
+
+.finisher-header{
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
 }
 
 .header {
