@@ -68,7 +68,7 @@ html, body {
     z-index: 1000;
 }
 
-.header-items li{
+.header-items li {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -76,11 +76,12 @@ html, body {
     position: relative;
     overflow: hidden;
     transform-origin: center left;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, transform 0.2s, background-color 0.3s ease;
     text-decoration: none;
     color: var(--light);
     width: 60px;
     height: 40px;
+    cursor: pointer;
 }
 
 .header-items li::before {
@@ -97,22 +98,46 @@ html, body {
     z-index: -1; 
 }
 
-.header-items li:hover,
-.header-items li:focus {
-    outline: 0;
-    width: 160px;
-    color: var(--dark);
-}
-
 .header-items li:hover::before,
 .header-items li:focus::before {
     transform: translateX(0);
+}
+
+.header-items li:hover {
+    background-color: var(--light);
+    color: var(--dark);
+    width: 160px;
+}
+
+.header-items li:hover.copied {
+    background-color: var(--pink);
+    color: var(--dark-gray);
 }
 
 .header-items li:hover .contact-text, 
 .header-items li:focus .contact-text {
     transform: translateX(0);
     opacity: 1;
+}
+
+.header-items li.copied {
+    animation: pop 0.2s ease-in-out;
+}
+
+@keyframes pop {
+    0% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(0.99); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
+}
+
+.header-items li:focus {
+    outline: 0;
 }
 
 .contact-text {
@@ -146,13 +171,6 @@ html, body {
     padding: 10px 20px;
     cursor: pointer;
     filter: drop-shadow(0 4px 6px rgba(249, 248, 248, 0.17));
-}
-
-
-.header-items li:hover {
-    background-color: var(--light);
-    color: var(--dark-gray);
-    transition: all 0.3s ease;  
 }
 
 .logo {
@@ -424,4 +442,40 @@ a {
     transform: translateY(0) scale(0.96);
     pointer-events: auto;
     text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.14);
+}
+
+/* Toast Notification Styles */
+.toast {
+    position: fixed;
+    top: -50px;
+    right: 0;
+    transform: translateX(-50%);
+    background-color: var(--dark-gray);
+    color: var(--light);
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.toast.show {
+    top: 100px;
+    opacity: 1;
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toast-content i {
+    color: var(--pink);
+    font-size: 1.2em;
+}
+
+.toast-message {
+    font-weight: 500;
 }
