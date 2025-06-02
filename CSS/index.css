@@ -84,6 +84,16 @@ html, body {
     cursor: pointer;
 }
 
+.header-items li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
 .header-items li::before {
     position: absolute;
     content: "";
