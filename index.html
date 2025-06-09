@@ -11,21 +11,21 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/projects.css">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 <body>
-    <div class="texture-bg" style="background-image: url('Images/texture.png');">
+    <div class="texture-bg" style="background-image: url('../Images/texture.png');">
     </div>
     <div class="finisher-header" style="width: 100%; height: 100vh;"></div>
-
     <div class="container">
-    <!-- Logo and Contact -->
     <header class="header">
         <div class="logo"> 
-            <a href="index.html">
+            <a href="../index.html">
                 <span class="first-letter">G</span><span class="first-expand">ianne</span> 
                 <span class="last-letter">B</span><span class="last-expand">unag</span>
             </a>
@@ -45,24 +45,20 @@
                 <span class="contact-text">Phone</span>
             </li>
             <li>
-                <a href="https://github.com/gigi-aan" target="_blank" rel="noopener noreferrer">
-                    <span class="contact-icon">
-                        <i class="bi bi-github"></i>
-                    </span>
-                    <span class="contact-text">Github</span>
-                </a>
+                <span class="contact-icon" data-copy="https://github.com/gigi-aan">
+                    <i class="bi bi-github"></i>
+                </span>
+                <span class="contact-text">Github</span>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/gianne-alexa-bunag/" target="_blank" rel="noopener noreferrer">
-                    <span class="contact-icon">
-                        <i class="bi bi-linkedin"></i>
-                    </span>
-                    <span class="contact-text">LinkedIn</span>
-                </a>
+                <span class="contact-icon" data-copy="https://www.linkedin.com/in/gianne-alexa-bunag/">
+                    <i class="bi bi-linkedin"></i>
+                </span>
+                <span class="contact-text">LinkedIn</span>
             </li>
         </div>
     </header>
-    
+
     <!-- Toast Notification -->
     <div id="toast" class="toast">
         <div class="toast-content">
@@ -71,67 +67,160 @@
         </div>
     </div>
 
-    <!-- Main Container -->
-    <div class="main-container">
-        <!-- Hero Section -->
-        <div class="hero-container">
-        <div class="hero" id="hero">
-            <div class="hero-content">
-            <h1>Gianne Alexa C. Bunag</h1>
-
-            <!-- Text Carousel -->
-            <div class="carousel-container">
-                <div class="carousel-slider" id="carousel-slider">
-                    <div class="carousel-item">Aspiring Web Developer</div>
-                    <div class="carousel-item">UI/UX Enthusiast</div>
-                    <div class="carousel-item">Matcha Lover</div>
-                    <div class="carousel-item">Lowkey obsessed with Figma</div>
-                    <div class="carousel-item">Passionate about human-centered design</div>
-                    <div class="carousel-item">Frontend Coder</div>
+    <div class="scroll-container">
+        <!-- Main Section -->
+        <section id="section1" class="page-section">
+            <div class="hero-container">
+            <div class="hero" id="hero">
+                <div class="hero-content">
+                <h1>Gianne Alexa C. Bunag</h1>
+    
+                <!-- Text Carousel -->
+                <div class="carousel-container">
+                    <div class="carousel-slider" id="carousel-slider">
+                        <div class="carousel-item">Aspiring Web Developer</div>
+                        <div class="carousel-item">UI/UX Enthusiast</div>
+                        <div class="carousel-item">Matcha Lover</div>
+                        <div class="carousel-item">Lowkey obsessed with Figma</div>
+                        <div class="carousel-item">Passionate about human-centered design</div>
+                        <div class="carousel-item">Frontend Coder</div>
+                    </div>
+                </div>
+                
+                <p>A graduating student passionate about creating clean, user-friendly, and impactful web solutions. Eager to bring a fresh perspective and dedication to real-world design challenges</p>
+                </div>
+                
+                <div class="current">
+                    <strong>Currently </strong><br>3rd Year Information Systems Student
+                </div>
+    
+                <div class="explore-btn-container">
+                    <div class="explore-btn">
+                    <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+                    <a href="Pages/projects.html">Explore Projects</a>
+                    </div>
                 </div>
             </div>
-            
-            <p>A graduating student passionate about creating clean, user-friendly, and impactful web solutions. Eager to bring a fresh perspective and dedication to real-world design challenges</p>
             </div>
-            
-            <div class="current">
-                <strong>Currently </strong><br>3rd Year Information Systems Student
-            </div>
+        </section>
 
-            <div class="explore-btn-container">
-                <div class="explore-btn">
-                <svg class="svgIcon" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
-                <a href="Pages/projects.html">Explore Projects</a>
+        <!-- SECTION 2 - About Me -->
+        <section id="section2" class="page-section">
+        <div class="grid-container">
+            <div class="about-container">
+                <h3>ABOUT ME</h3>
+                <h2>Hello, </h2>
+                <h2>I'm Gianne</h2>
+                <p>My journey into web design began with a fascination for how digital interfaces shape our daily lives. I believe that good design is not just about aesthetics, but about solving problems, enhancing usability, and creating memorable interactions. As a graduating student, I'm constantly learning and committed to developing my skills in responsive and accessible web development.</p>
+            </div>
+            <div class="passion-container">
+                <h3>ABOUT MY PASSIONS</h3>
+                <li> Deep Diving Into UI/UX Design
+                    <ul>I'm passionate about crafting intuitive and effective user experiences. I'm particularly fascinated by the crucial role of micro-interactions, like how the design and placement of a simple button can fundamentally make or break a user's journey.</ul>
+                </li>
+                <li>Thriving in Productive Environments
+                    <ul>You'll often find me working on my backlogs or diving into projects at a local café or library. Beyond a good matcha, I'm drawn to the subtle energy of being surrounded by others who are also focused and productive. There's something about that collective drive that helps me stay engaged and motivated in my own work.</ul>
+                </li>
+                <li>The Comfort of Cinematic Storytelling
+                    <ul>When I need to relax and recharge, I often turn to movies, with a special love for Filipino cinema. I'm drawn to how these stories can be so inspiring, humorous, or deeply moving. It's an experience that feels like 'coming home,' offering both escape and a meaningful connection to narrative and emotion.</ul>
+                </li>
+            </div>
+            <div class="education-container">
+                <h3>EDUCATION</h3>
+                <div class="education-inner">
+                    <div class="date-container">
+                        <p>Aug 2022 - Present</p>
+                        <p>Expected Graduation: May 2026</p>
+                    </div>
+                    <div class="school-container">
+                        <div class="school-logo">
+                            <img src="../Images/ust-logo.png" alt="University of Santo Tomas Logo">
+                        </div>
+                        <div class="school-title">
+                            <h2>University of Santo Tomas</h2>
+                            <p>Bachelor of Science in Information Systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education-container-2">
+                <h3>EDUCATION</h3>
+                <div class="education-inner">
+                    <div class="date-container">
+                        <p>Aug 2020 - May 2022</p>
+                    </div>
+                    <div class="school-container">
+                        <div class="school-logo">
+                            <img src="../Images/feu-roosevelt-logo.png" alt="University of Santo Tomas Logo">
+                        </div>
+                        <div class="school-title">
+                            <h2>FEU Roosevelt Marikina</h2>
+                            <p>Science, Technology, Engineering, and Mathematics (STEM)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        </section>
+    
+    <!-- SECTION 3 - Project 1-->
+    <section class="page-section" id="section3">
+        <div class="project-container">
+            <div class="project-card">
+                <h3>STUDENT VIOLATIONS MANAGEMENT SYSTEM</h3>
+                <p>Role</p>
+                <p>Frontend Developer & UI/UX Designer</p>
+                <p>Duration</p>
+                <p>August 2024 - March 2025</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- SECTION 4 - Project 2 -->
+    <section class="page-section" id="section4">
+        <div class="project-container">
+            <div class="project-card">
+                <h3>CECE's Online Ordering Website</h3>
+                <p>Role</p>
+                <p>Full Stack Developer</p>
+                <p>Duration</p>
+                <p>November 2023 - Mar 2024</p>
+            </div>
+        </div>
+    </section>
 
     <nav class="navbar">
-        <a href="index.html" class="link">
+        <a href="#section1" class="link">
             <span class="link-icon">
                 <i class="bi bi-house"></i>
             </span>
             <span class="link-title">Home</span>
         </a>
-        <a href="Pages/about.html" class="link">
+        <a href="#section2" class="link">
             <span class="link-icon">
                 <i class="bi bi-person-circle"></i>
             </span>
             <span class="link-title">About</span>
         </a>
-        <a href="Pages/projects.html" class="link">
+        <a href="#section3" class="link">
             <span class="link-icon">
                 <i class="bi bi-code-slash"></i>
             </span>
             <span class="link-title">Projects</span>
         </a>
     </nav>
+
+    <div class="dot-nav">
+        <span class="dot active" data-target="section1"></span>
+        <span class="dot" data-target="section2"></span>
+        <span class="dot" data-target="section3"></span>
+        <span class="dot" data-target="section4"></span>
     </div>
 
-    <script src="Javascript/finisher-header.es5.min.js" type="text/javascript"></script>
-    <script src="Javascript/bg.js" type="text/javascript"></script>
-    <script src="Javascript/index.js" type="text/javascript"></script>
+    </div>
+    <script src="../Javascript/finisher-header.es5.min.js" type="text/javascript"></script>
+    <script src="../Javascript/bg.js" type="text/javascript"></script>
+    <script src="../Javascript/projects.js" type="text/javascript"></script>
+    <script src="../Javascript/index.js" type="text/javascript"></script>
 </body>
 </html>

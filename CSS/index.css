@@ -24,7 +24,6 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 70px 50px;
 }
 
 .main-container {
@@ -64,8 +63,14 @@ html, body {
     width: 95%;
     height: 60px;
     align-items: center;
-    padding: 10px 0px;
+    padding: 10px 40px 30px 30px;
     z-index: 1000;
+    backdrop-filter: blur(6px);
+    background-color: rgba(41, 41, 41, 0.15);
+    mask-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 1) 70%, 
+        rgba(0, 0, 0, 0)
+    );
 }
 
 .header-items li {
@@ -338,6 +343,8 @@ a {
     background-color: var(--light);
     border-radius: 20px;
     padding: 70px 20px;
+    height: calc(100vh - 300px);
+    margin: 0px 50px;
 }
 
 .hero-content{
@@ -488,4 +495,15 @@ a {
 
 .toast-message {
     font-weight: 500;
+}
+
+.logo, .header-items, .navbar, .dot-nav {
+    transition: background-color 0.3s ease;
+}
+
+.logo.dark-bg, 
+.header-items.dark-bg, 
+.navbar.dark-bg, 
+.dot-nav.dark-bg {
+    background-color: var(--dark);
 }
