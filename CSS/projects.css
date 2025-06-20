@@ -89,7 +89,7 @@ html, body{
     
 .div1 {
     grid-column: span 2 / span 2;
-    border-radius: 10px;
+    border-radius: 20px;
     height: fit-content;
 }
 
@@ -97,21 +97,21 @@ html, body{
     overflow: hidden;
     position: relative;
     grid-column-start: 3;
-    margin-left: 10px;
-    border-radius: 10px 0px 0px 0px;
+    margin-left: 20px;
+    border-radius: 20px 0px 0px 0px;
 }
 
 .div3 {
     grid-column-start: 4;   
-    border-radius: 0px 10px 0px 0px;
+    border-radius: 0px 20px 0px 0px;
 }
 
 .div7 {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-row-start: 2;
-    margin-top: 10px;
-    border-radius: 10px 0px 0px 10px;
+    margin-top: 20px;
+    border-radius: 20px 0px 0px 20px;
     text-align: left;
     padding: 60px;
 }
@@ -126,6 +126,7 @@ html, body{
     cursor: pointer;
     transition: all 0.5s;
     font-family: var(--poppins);
+    font-size: 14px;
 }
 
 .div7 .view-details-btn:hover{
@@ -138,12 +139,12 @@ html, body{
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 2;
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 0px 0px 20px 0px;
     mask-image: radial-gradient(
-        circle 10px at 0 0,
+        circle 20px at 0 0,
         transparent 0 ,
-        transparent 9.5px,
-        black 10px
+        transparent 19.5px,
+        black 20px
     );
     padding: 40px;
 }
@@ -161,7 +162,12 @@ html, body{
 }
 
 .div8 .image-container{
-    background-color: var(--pink);
+    display: flex;
+    background-color: var(--dark-gray);
     width: 100%;
     height: 250px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
 }
