@@ -13,10 +13,8 @@ html, body{
 }
 
 .project-container {
-    background-color: var(--light);
     border-radius: 20px;
     width: 100%;
-    height: calc(100vh - 200px);
     margin: 20px 70px;
 }
 
@@ -76,4 +74,94 @@ html, body{
 
 .scroll-container::-webkit-scrollbar {
     display: none;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: fit-content auto auto; 
+    text-align: center;
+}
+
+.div1, .div2, .div3, .div7, .div8, .div9{
+    background-color: var(--light);
+}
+    
+.div1 {
+    grid-column: span 2 / span 2;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.div2 {
+    overflow: hidden;
+    position: relative;
+    grid-column-start: 3;
+    margin-left: 10px;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.div3 {
+    grid-column-start: 4;   
+    border-radius: 0px 10px 0px 0px;
+}
+
+.div7 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 2;
+    margin-top: 10px;
+    border-radius: 10px 0px 0px 10px;
+    text-align: left;
+    padding: 60px;
+}
+
+.div7 .view-details-btn{
+    background-color: var(--dark);
+    color: var(--light);
+    border: none;
+    padding: 10px 50px;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-family: var(--poppins);
+}
+
+.div7 .view-details-btn:hover{
+    background-color: var(--pink);
+    color: var(--dark);
+}
+
+.div8 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    border-radius: 0px 0px 10px 0px;
+    mask-image: radial-gradient(
+        circle 10px at 0 0,
+        transparent 0 ,
+        transparent 9.5px,
+        black 10px
+    );
+    padding: 40px;
+}
+
+.role p, .duration p{
+    margin: 0;
+}
+
+.role{
+    margin-bottom: 40px;
+}
+
+.duration{
+    margin-bottom: 40px;
+}
+
+.div8 .image-container{
+    background-color: var(--pink);
+    width: 100%;
+    height: 250px;
 }
