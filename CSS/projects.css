@@ -146,7 +146,9 @@ html, body{
         transparent 19.5px,
         black 20px
     );
-    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .role p, .duration p{
@@ -162,12 +164,9 @@ html, body{
 }
 
 .div8 .image-container{
-    display: flex;
-    background-color: var(--dark-gray);
+
+}
+
+.image-container img{
     width: 100%;
-    height: 250px;
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    color: var(--light);
 }
