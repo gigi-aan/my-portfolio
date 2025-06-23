@@ -1,3 +1,7 @@
+.logo, .header-items, .navbar{
+    background-color: var(--dark); 
+}
+
 .project-header{
     position: relative;
     width: 100%;
