@@ -1,0 +1,137 @@
+.project-header{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.project-header::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../Images/pink-series.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;  
+}
+
+.project-header::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(87, 87, 87, 0.5); 
+    z-index: -1;
+}
+
+.project-details-container{
+    display: flex;
+    flex-direction: row;
+    padding: 50px 100px 200px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h1{
+    margin-top: 85px;
+}
+
+.project-header h1{
+    color: var(--light);
+    text-align: center;
+    font-size: 36px;
+    filter: drop-shadow(0 4px 4px rgba(208, 208, 208, 0.3))
+}
+
+.project-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dark-gray);
+    border-radius: 90px;
+    color: var(--light);
+    padding: 100px 40px;
+    margin-top: -80px;
+}
+
+h3, p, ul{
+    margin: 0;
+}
+
+p, ul{
+    padding-left: 15px;
+}
+
+.role, .duration, .team, .overview, .problem{
+    margin-bottom: 30px;
+}
+
+ul{
+    list-style: none;
+}
+
+.image-carousel-container {
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+}
+
+.project-features{
+    margin: 0px 50px 80px 50px;
+}
+
+.project-features h2{
+    color: var(--light);
+    font-size: 28px;
+    filter: drop-shadow(0 4px 4px rgba(208, 208, 208, 0.3))
+}
+
+.features-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.feature1, .feature2, .feature3, .feature4{
+    background-color: var(--light);
+    min-height: 400px;
+    width: 15%;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.feature2:hover, .feature3:hover, .feature4:hover{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.feature1{
+    width: 100%;
+}
+
+.client-logo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-logo img{
+    width: 300px;
+}
+
+.role-duration-team-tech{
+    color: var(--light);
+    width: 100%;
+}
+
+.role-duration-team-tech{
+    filter: drop-shadow(0 4px 4px rgba(255, 255, 255, 0.25))
+}
+
+.client-logo img{
+    filter: drop-shadow(0 4px 4px rgba(255, 255, 255, 0.5))
+}
